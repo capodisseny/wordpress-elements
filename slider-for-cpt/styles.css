@@ -1,6 +1,4 @@
 
-
-
 /*    SLIDER miquel  */
 
 
@@ -11,7 +9,9 @@
 }
 
 
-
+.slider-m .container, .slider-m .container > .row, .slider-m .container .col {
+    height: 100%;
+}
 
 /*intent touch*/
 /*.box-buttons-slider, .slider-m, .slider-m-nav*/
@@ -39,12 +39,7 @@
 
     overflow: hidden;
 }
-.slider-m * {
-
-    margin: 0;
-    padding: 0;
-	height: 100%;
-}
+.slider-m * {margin: 0;padding: 0;}
 
 .slide-m {
 	width: 100%;
@@ -58,6 +53,7 @@
 	-o-transition: 0.3s;
 	transition: 0.3s;
 	opacity: 0;
+	height: 100%;
 }
 
 .slide-m .col, .box-buttons-slider .col, .slider-m > *  {
@@ -191,8 +187,8 @@ a.btn-s-next:after {
     background-position:  50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
 }
-
 
 .arrow {
    border: solid black;
