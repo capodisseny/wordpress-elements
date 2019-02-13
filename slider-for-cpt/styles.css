@@ -1,4 +1,5 @@
 
+
 /*    SLIDER miquel  */
 
 
@@ -183,7 +184,7 @@ a.btn-s-next:after {
     width: 100%;
 }
 
-.src-to-bg {
+.slide-m {
     background-position:  50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
