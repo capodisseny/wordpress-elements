@@ -1,5 +1,9 @@
+(function ($) {
+    "use strict";
 
-	// slider - miquel
+    window.$ = $;
+	
+// slider - miquel
 
 
 
@@ -103,3 +107,26 @@
 					}
 
 		});
+
+
+
+
+// set  data-src iamge as css background
+
+jQuery(document).ready(function( $ ) {
+
+  //general
+$(".src-to-bg").each(function(){
+
+	var imgBg = $(this).find("img").attr("src");
+
+	 $(this).attr("style", "background-image:url(" +  imgBg + ");");
+
+});
+});
+
+
+
+
+})(jQuery);
+
