@@ -109,19 +109,17 @@
 		});
 
 
-
-
 // set  data-src iamge as css background
 
 jQuery(document).ready(function( $ ) {
 
   //general
-$(".src-to-bg").each(function(){
+$(".slide-m").each(function(){
 
-	var imgBg = $(this).find("img").attr("src");
+  var imgBg = $(this).find("img").attr("src");
 
-	 $(this).attr("style", "background-image:url(" +  imgBg + ");");
-	 $(this).find("img").attr("style" ,"display:none;");
+   $(this).attr("style", "background-image:url(" +  imgBg + ");");
+   $(this).find("img").attr("style" ,"display:none;");
 
 });
 });
