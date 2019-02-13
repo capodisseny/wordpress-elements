@@ -1,0 +1,136 @@
+
+
+/*    SLIDER miquel  */
+
+
+.slider-m-container .container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/*intent touch*/
+/*.box-buttons-slider, .slider-m, .slider-m-nav*/
+
+.slider-m, .slider-m > *, .slider-m-nav, .slide-m .w-image {
+    height: 700px;
+}
+
+
+.slider-m {
+   width: 100%;
+   position: relative;
+   padding: 0;
+   overflow: hidden;
+   border-radius: 61px;
+}
+
+.slider-m-container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.slider-m > * {
+
+    overflow: hidden;
+}
+.slider-m * {
+
+    margin: 0;
+    padding: 0;
+}
+
+.slide-m {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 0;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	opacity: 0;
+}
+
+.slide-m .col, .box-buttons-slider .col, .slider-m > *  {
+    padding: 0;
+    margin: 0;
+}
+
+
+.slide-m.active {-webkit-transform: translateX(0);-moz-transform: translateX(0);-o-transform: translateX(0);transform: translateX(0);z-index: 1;opacity: 1;}
+.slide-m.next {-webkit-transform: translateX(100%);-moz-transform: translateX(100%);-o-transform: translateX(100%);transform: translateX(100%);}
+.slide-m.prev {
+
+	 -webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+
+.box-buttons-slider {
+    top: -100%;
+    z-index: 1;
+	left: 0;
+}
+
+.slider-m-nav.button-prev-m {
+    left: 0;
+	    text-align: left;
+}
+.slider-m-nav.button-next-m {
+    right: 0;
+	    text-align: right;
+}
+
+.slider-m-nav {
+    width: 120px;
+    position: absolute;
+    cursor: pointer;
+	background-color: #ffffff1c;
+}
+
+
+a.btn-slider-m {
+    position: relative;
+    top: calc(50% - 70px);
+    display: block;
+    font-size: 70px;
+}
+
+a.btn-s-prev:after {
+    content: "\3008";
+	   margin-left: 0px;
+}
+
+a.btn-s-next:after {
+    content: "\3009";
+	   margin-right: 0px;
+}
+
+
+.slide-m .w-image.text-left {
+    width: 100%;
+}
+
+
+
+
+
+
+.slide-m img {
+    max-width: inherit !important;
+    /* width: 100%; */
+    /* max-height: 100%; */
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+}
