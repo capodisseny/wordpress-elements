@@ -18,7 +18,7 @@
 /*.box-buttons-slider, .slider-m, .slider-m-nav*/
 
 .slider-m, .slider-m > *, .slider-m-nav, .slide-m .w-image {
-    height: 700px;
+    height: 600px;
 }
 
 
@@ -234,7 +234,7 @@ a.btn-s-next:after {
 @media (max-width:1224px){
 
 	.slider-m, .slider-m > *, .slider-m-nav, .slide-m .w-image {
-    height: 600px;
+    height: 550px;
 }
 
 }
