@@ -121,6 +121,7 @@ $(".src-to-bg").each(function(){
 	var imgBg = $(this).find("img").attr("src");
 
 	 $(this).attr("style", "background-image:url(" +  imgBg + ");");
+	 $(this).find("img").attr("style" ,"display:none;");
 
 });
 });
