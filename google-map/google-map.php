@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+
+?><!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
@@ -20,18 +22,23 @@
   </head>
   <body>
     <div id="map"></div>
+
+
     <script>
+
+
+            //do something with b-lazy plugin, lightbox plugin and then with flexslider
 
     var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
-          center: new google.maps.LatLng(39.938844,  3.957351),
+          center: new google.maps.LatLng(<?php echo $lat; ?>,  <?php echo $lng; ?>),
           mapTypeId: 'roadmap',
 		  disableDefaultUI: true,
-		  styles: 
-			
-			
+		  styles:
+
+
 			[
   {
     "elementType": "geometry",
@@ -178,7 +185,7 @@
     "elementType": "geometry",
     "stylers": [
       {
-        "color": "#2bd2f3"
+        "color": "<?php echo $lightColor ?>"
       }
     ]
   },
@@ -192,31 +199,31 @@
     ]
   }
 ]
-			
+
         });
 
 
-      var iconBase = '/menorquina/wp-content/uploads/map-icons/';
+      var iconBase = "<?php echo $icon_path; ?>"
         var icons = {
          /* ofi: {
             icon: iconBase + 'icon-ofi.png'
           },*/
           barco: {
-            icon: iconBase + 'icon-barco.png'
+            icon: iconBase +  "<?php echo $icon_file; ?>"
           }
         };
-		  
-		  
+
+
 	var features = [
           {
-            position: new google.maps.LatLng(39.938886,  3.957365),
+            position: new google.maps.LatLng(<?php echo $lat; ?>,  <?php echo $lng; ?>),
             type: 'barco'
           }/*, {
             position: new google.maps.LatLng(40.054406, 4.131777),
             type: 'barco'
           }*/
         ];
-		  
+
       // Create markers.
         features.forEach(function(feature) {
           var marker = new google.maps.Marker({
@@ -226,9 +233,24 @@
           });
         });
       }
+
+
+
+
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8w3wvAjmG2AMmM3rC4WrzZn5sh72yqYA&callback=initMap">
-    </script>
+
+    <script type="text/javascript">
+function downloadJSAtOnload() {
+var element = document.createElement("script");
+element.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyB8w3wvAjmG2AMmM3rC4WrzZn5sh72yqYA&callback=initMap";
+document.body.appendChild(element);
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>
+
   </body>
 </html>
