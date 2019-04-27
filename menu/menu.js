@@ -53,6 +53,15 @@ jQuery(document).ready(function( $ ) {
 		}
 
 });
+	
+	
+ //close menu on click link ONE PAGER
+ $(".menu-item").click(function(){
+
+   $(".site-header").removeClass('show-menu');
+    $(".menu-toggle .container").removeClass('change');
+
+});
 
 
 
@@ -67,6 +76,14 @@ $(this).children().toggleClass('show-menu');
 $(".site-header .close-menu").click(function(){
 $(".site-header").removeClass('show-menu');
 
+});
+	
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
 });
 
 
